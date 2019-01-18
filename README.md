@@ -40,6 +40,7 @@ Copy the source of sql.lua into a new ModuleScript in roblox studio. After doing
 
 ###### Roblox Module Callback
 if Success: Callback(boolean Success(true), table ServerResponse)
+
 if Failure: Callback(boolean Success(false), string errorMessage, table ServerResponse)
 
 ##### ServerResponse table
