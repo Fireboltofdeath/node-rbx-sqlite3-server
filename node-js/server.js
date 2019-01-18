@@ -1,10 +1,12 @@
 const databaseFile = './.data/rbx-sqlite3-db003.db'; // If you need to reset EVERYTHING, you can change this.
 
-const tables = [ // These are only created once, you cannot change them later unless you change the above value. Changing these without changing the database file can cause instability.
+const tables = [ // These are created once if alwaysCreateTables is false, however if it is set to true these all will be made each time (will not reset data, but will create any new table entries)
     "table1", // All tables have two rows, key and value
     "table2",
     "table3"
 ];
+
+const alwaysCreateTables = true;
 
 const ApiToken = "USE A PASSWORD GENERATOR"; // Highly recommended: https://www.grc.com/passwords.htm
 
@@ -29,10 +31,10 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 app.use(bodyParser.json());
-if (!dbExists) {
+if (!dbExists || alwaysCreateTables) {
   /* fill database with tables */
   tables.forEach(function(v, i) {
-    Database.prepare("CREATE TABLE "+v+" (key VARCHAR("+tableKeyLength+") PRIMARY KEY, value VARCHAR("+tableValueLength+") NOT NULL)").run();
+    Database.prepare("CREATE TABLE IF NOT EXISTS "+v+" (key VARCHAR("+tableKeyLength+") PRIMARY KEY, value VARCHAR("+tableValueLength+") NOT NULL)").run();
   });
 }
 function isValidTable(tab) {
