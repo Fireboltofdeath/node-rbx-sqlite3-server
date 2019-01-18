@@ -44,7 +44,9 @@ if Failure: Callback(boolean Success(false), string errorMessage, table ServerRe
 
 ##### ServerResponse table
 {
+
   Success: boolean,
+  
   (if not success) Message: string Error Message,
   
   (postAsync) Changes: int
@@ -52,7 +54,9 @@ if Failure: Callback(boolean Success(false), string errorMessage, table ServerRe
   (deleteAsync) KeyDeleted: boolean
   
   (getAsync) ValueExists: boolean
+  
   (getAsync) Value: string or null
+  
 }
 
 ## Documentation
