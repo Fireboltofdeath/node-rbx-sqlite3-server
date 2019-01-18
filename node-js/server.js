@@ -112,7 +112,7 @@ app.post("/getAsync", function(req, res) {
   if (req.headers["apitoken"] == ApiToken) {
     if (req.body.Key != null && req.body.Table != null) {
       if (isValidTable(req.body.Table)) {
-        if (req.body.Key == "*") {
+        if (req.body.Key == "*" && getAsyncAllowStar) {
           $stmt = Database.prepare("SELECT * FROM `" + req.body.Table +"`");
           
           var data = $stmt.all();
