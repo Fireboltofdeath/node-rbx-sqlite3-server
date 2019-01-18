@@ -12,5 +12,24 @@ end)
 
 ## PostAsync Example
 
+```lua
+sql:PostAsync("table1example", "Table 1 key", function(Success, Value, ServerResponse)
+	if (Success) then
+		-- Value is ServerResponse, and third argument is null.
+	else
+		-- Value is Error Message, and third argument is Server Response. (Server Response gives more detailed information about an error)
+	end
+end)
+```
 
 ## DeleteAsync Example
+
+```lua
+sql:DeleteAsync("table1example", "Table 1 key", function(Success, Value, ServerResponse)
+	if (Success) then
+		-- Value is ServerResponse, and third argument is null.
+	else
+		-- Value is Error Message, and third argument is Server Response. (Server Response gives more detailed information about an error)
+	end
+end)
+```
