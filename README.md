@@ -23,5 +23,9 @@ You'll want to replace the files in your glitch project with the files in this r
 Inside of server.js, you will see several variables above a comment, do not modify anything below unless you know what you're doing.
 Configurations settings:
 
-* databaseFile
-This iss 
+- **databaseFile**: This is the file where your SQLite3 data is stored. Changing this will reset all data.
+- **tables**: This is the tables that you want. Tables allow you to seperate categories of information.
+- **ApiToken**: This is the token you will use to access the database. I highly recommend using a password generating and storing the password in your .env file
+- **tableKeyLength**: Ignore, doesn't do anything.
+- **tableValueLength**: Ignore, doesn't do anything.
+- **getAsyncAllowStar**: Allow you to get all data from a table by specifying the key as "*"; If a key is a "*" you will not be able to access it with this option on.
