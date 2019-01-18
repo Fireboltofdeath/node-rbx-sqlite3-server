@@ -67,6 +67,14 @@ if Failure: Callback(boolean Success(false), string errorMessage, table ServerRe
 ##### sql:GetAsync(string Table, string Key, function Callback)
 Get a value from the database.
 
+Example: sql:GetAsync("table1", "ROBLOX", function(Success, Value, Response) if (Success) then (Value is the value from key or null if it doesn't exist) end end)
+
 ##### sql:PostAsync(string Table, string Key, string Value \[, function Callback]);
 This sets (or creates) a value in the database.
+
 Example: sql:PostAsync("table1", "ROBLOX", 'Some Information About Roblox');
+
+##### sql:DeleteAsync(string Table, string Key \[, function Callback]);
+This deletes a value in the database.
+
+Example: sql:DeleteAsync("table1", "ROBLOX")
