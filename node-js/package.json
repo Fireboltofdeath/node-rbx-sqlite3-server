@@ -1,0 +1,17 @@
+{
+  "name": "rbx-mysql-server",
+  "version": "1.0.0",
+  "description": "Roblox MySQL Server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "sqlite3": "^4.0.0",
+    "better-sqlite3": "^5.2.1"
+  },
+  "engines": {
+    "node": "8.x"
+  }
+}
