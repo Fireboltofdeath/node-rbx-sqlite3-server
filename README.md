@@ -1,6 +1,6 @@
 # node-rbx-sqlite3-server
 This is meant for users who already know how to use Node.JS;
-[Roblox Api](#robloxapi);
+[Roblox Api](#roblox-api);
 
 # HOW TO USE
 This is made to be used on Glitch or your own VPS. I highly recommending investing in your own VPS, however it is up to you.
@@ -31,4 +31,4 @@ Configurations settings:
 - **tableValueLength**: Ignore, doesn't do anything.
 - **getAsyncAllowStar**: Allow you to get all data from a table by specifying the key as "*"; If a key is a "*" you will not be able to access it with this option on.
 
-(#robloxapi)
+# Roblox Api
