@@ -32,3 +32,36 @@ Configurations settings:
 - **getAsyncAllowStar**: Allow you to get all data from a table by specifying the key as "*"; If a key is a "*" you will not be able to access it with this option on.
 
 # Roblox Api
+
+The roblox API is located in the [/roblox](https://github.com/Fireboltofdeath/node-rbx-sqlite3-server/tree/master/roblox) subdirectory in this repo.
+Copy the source of sql.lua into a new ModuleScript in roblox studio. After doing so, you can require the module and it'll return a few configuration options.
+- **ApiUrl**: Set this to the url of your glitch (or website) without a trailing slash. EX: https://example.fireboltofdeath.tk
+- **Token**: Set this to the token you set inside of your server.js
+
+###### Roblox Module Callback
+if Success: Callback(boolean Success(true), table ServerResponse)
+if Failure: Callback(boolean Success(false), string errorMessage, table ServerResponse)
+
+##### ServerResponse table
+{
+  Success: boolean,
+  (if not success) Message: string Error Message,
+  
+  (postAsync) Changes: int
+  
+  (deleteAsync) KeyDeleted: boolean
+  
+  (getAsync) ValueExists: boolean
+  (getAsync) Value: string or null
+}
+
+## Documentation
+
+
+
+##### sql:GetAsync(string Table, string Key, function Callback)
+Get a value from the database.
+
+##### sql:PostAsync(string Table, string Key, string Value \[, function Callback]);
+This sets (or creates) a value in the database.
+Example: sql:PostAsync("table1", "ROBLOX", 'Some Information About Roblox');
