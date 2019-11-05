@@ -29,7 +29,7 @@ Configurations settings:
 - **ApiToken**: This is the token you will use to access the database. I highly recommend using a password generating and storing the password in your .env file
 - **tableKeyLength**: Ignore, doesn't do anything.
 - **tableValueLength**: Ignore, doesn't do anything.
-- **getAsyncAllowStar**: Allow you to get all data from a table by specifying the key as "*"; If a key is a "*" you will not be able to access it with this option on.
+- **getAsyncAllowStar**: Allow you to get all data from a table by specifying the key as "\*"; If a key is a "\*" you will not be able to access it with this option on.
 
 # Roblox Api
 
