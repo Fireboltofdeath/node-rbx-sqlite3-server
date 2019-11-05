@@ -13,7 +13,7 @@ end)
 ## PostAsync Example
 
 ```lua
-sql:PostAsync("table1example", "Table 1 key", function(Success, Value, ServerResponse)
+sql:PostAsync("table1example", "Table 1 key", "New Value", function(Success, Value, ServerResponse)
 	if (Success) then
 		-- Value is ServerResponse, and third argument is null.
 	else
