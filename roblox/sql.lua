@@ -109,6 +109,9 @@ function sql:GetAsync(Table, Key, Callback)
 		end)
 		if (validJson) then
 			if (data.StatusCode == 200) then
+				if (Resp.ValueExists) then
+					Resp.Value = Resp.Value.value;		
+				end
 				Callback(true, Resp);
 			else
 				Callback(false, "Request did not succeed. [" .. data.StatusCode .. "]", Resp);
